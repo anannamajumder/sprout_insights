@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DeepDive | Predictive Listening Cockpit</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: rgb(15, 15, 15);
+      color: rgb(240, 240, 240);
+    }
+    header {
+      background-color: rgb(36, 36, 36);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      color: rgb(0, 198, 255);
+      font-size: 1.5rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav a {
+      color: rgb(160, 160, 160);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: rgb(0, 198, 255);
+    }
+    .container {
+      padding: 2rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background-color: rgb(36, 36, 36);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 0 10px rgba(0, 198, 255, 0.1);
+    }
+    .card h2 {
+      margin-top: 0;
+      color: rgb(0, 198, 255);
+      font-size: 1.25rem;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.3rem 0.7rem;
+      background: rgb(255, 91, 91);
+      border-radius: 999px;
+      font-size: 0.75rem;
+      margin-top: 0.5rem;
+    }
+    .filters {
+      margin-bottom: 2rem;
+    }
+    .filters select, .filters button {
+      margin-right: 1rem;
+      background: rgb(36, 36, 36);
+      color: white;
+      border: 1px solid rgb(60, 60, 60);
+      padding: 0.5rem;
+      border-radius: 6px;
+    }
+    .btn {
+      background-color: rgb(0, 198, 255);
+      color: black;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: rgb(0, 180, 230);
+    }
+    footer {
+      margin-top: 4rem;
+      text-align: center;
+      color: rgb(120, 120, 120);
+      font-size: 0.9rem;
+      padding: 2rem;
+      border-top: 1px solid rgb(36, 36, 36);
+    }
+    .report-section {
+      margin-top: 3rem;
+    }
+    .report-section h2 {
+      color: rgb(0, 198, 255);
+    }
+    .report-section p {
+      color: rgb(200, 200, 200);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>DeepDive Dashboard</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Trends</a></li>
+        <li><a href="#">Alerts</a></li>
+        <li><a href="#">Personas</a></li>
+        <li><a href="#">Insights</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="filters">
+      <select>
+        <option selected>Platform: Twitter</option>
+        <option>Instagram</option>
+        <option>Trustpilot</option>
+      </select>
+      <select>
+        <option selected>Persona: Gen Z</option>
+        <option>Millennials</option>
+        <option>Parents</option>
+      </select>
+      <button class="btn">Escalate to PR</button>
+      <button class="btn">Generate Summary</button>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Sentiment Trend</h2>
+        <p>📈 Positive sentiment increasing over last 24h</p>
+        <span class="badge">Spike Detected</span>
+      </div>
+      <div class="card">
+        <h2>Cross-Channel Sentiment</h2>
+        <p>📊 Twitter spike leads by 67%, Reddit by 28%</p>
+        <span class="badge" style="background: rgb(255, 171, 25);">Watch</span>
+      </div>
+      <div class="card">
+        <h2>Alert Log</h2>
+        <ul>
+          <li>🔥 Product X backlash - 9:32 AM</li>
+          <li>📢 Campaign Y Praise - 8:10 AM</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>AI Insight</h2>
+        <p>LLM: “Spike caused by user-generated thread comparing packaging”</p>
+        <p>Confidence: 94%</p>
+      </div>
+    </div>
+
+    <div class="report-section">
+      <h2>Actionable Intelligence</h2>
+      <p>DeepDive uses real-time AI monitoring to detect sentiment spikes and understand context with large language models (LLMs). By analyzing emotion signals across multiple platforms, our system delivers insights that drive smarter brand responses.</p>
+      <p><strong>Use Case:</strong> PR team is alerted of a negative spike in packaging reviews from Gen Z Twitter users. Suggested response: publish a clarification post and engage with influencers for damage control.</p>
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 DeepDive Inc. | Powered by Predictive AI for Social Sentiment
+  </footer>
+</body>
+</html>
